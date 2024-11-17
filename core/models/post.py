@@ -15,5 +15,9 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
+    @property
+    def attachments(self):
+        return self.attachments
+
     def __str__(self) -> str:
         return self.title
